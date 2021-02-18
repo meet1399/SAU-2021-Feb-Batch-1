@@ -1,0 +1,48 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Football_MeetShah",
+		"_postman_id": "1175fe6b-4a58-b395-ee64-514f78109e56",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/football",
+			"request": {
+				"url": "http://localhost:8080/football",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Inserting a Football Player"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"id05\",\n\t\"player\": \"Messi\",\n\t\"goals\": 17\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/football/goals/10",
+			"request": {
+				"url": "http://localhost:8080/football/goals/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Getting players with goals greater than 10"
+					}
+				],
+				"body": {},
+				"description": "Answer\r\n[\r\n    {\r\n        \"id\": \"id01\",\r\n        \"player\": \"Ronaldo\",\r\n        \"goals\": 15\r\n    },\r\n        \"id\": \"id03\",\r\n        \"player\": \"Mbappe\",\r\n        \"goals\": 12\r\n    },\r\n    {\r\n        \"id\": \"id05\",\r\n        \"player\": \"Messi\",\r\n        \"goals\": 17\r\n    }\r\n]"
+			},
+			"response": []
+		}
+	]
+}

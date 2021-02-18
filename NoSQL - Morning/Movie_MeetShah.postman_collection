@@ -1,0 +1,88 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Movie_Postman_MeetShah",
+		"_postman_id": "2acd97d0-e819-1f17-aec0-be4954a74175",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/movies/city/Surat",
+			"request": {
+				"url": "http://localhost:8080/movies/city/Surat",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Searching movies by city name => Surat",
+						"warning": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": "Answer\r\n[\r\n    {\r\n        \"id\": \"id01\",\r\n        \"moviename\": \"Harry Potter\",\r\n        \"city\": [\r\n            \"Surat\",\r\n            \"Chennai\"\r\n        ]\r\n    },\r\n    {\r\n        \"id\": \"id03\",\r\n        \"moviename\": \"Fast and Furious\",\r\n        \"city\": [\r\n            \"Surat\",\r\n            \"Bangalore\",\r\n            \"Mumbai\"\r\n        ]\r\n    }\r\n]"
+			},
+			"response": []
+		},
+
+		{
+			"name": "http://localhost:8080/movies/name/Fast and Furious",
+			"request": {
+				"url": "http://localhost:8080/movies/name/Fast and Furious",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Searching a movie by name => Fast and Furious",
+						"warning": ""
+					}
+				],
+				"body": {},
+				"description": "Answer\r\n{\r\n    \"id\": \"id03\",\r\n    \"moviename\": \"Fast and Furious\",\r\n    \"city\": [\r\n        \"Surat\",\r\n        \"Bangalore\",\r\n        \"Mumbai\"\r\n    ]\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/id04",
+			"request": {
+				"url": "http://localhost:8080/movies/id04",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Deleting a movie where id = id04",
+						"warning": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies",
+			"request": {
+				"url": "http://localhost:8080/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "Inserting a movie",
+						"warning": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"id04\",\n\t\"moviename\":\"James Bond\",\n\t\"city\":[\"Chennai\",\"Mumbai\",\"Bangalore\",\"Hyderabad\",\"Delhi\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
