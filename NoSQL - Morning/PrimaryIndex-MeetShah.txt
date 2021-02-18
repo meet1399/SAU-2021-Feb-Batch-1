@@ -1,0 +1,8 @@
+Creating primary index -
+create primary index on couchbasedemo;
+
+Dropping primary index -
+drop primary index on couchbasedemo; 
+
+Putting appropriate index - 
+create primary index 'id' on couchbasedemo using GSI;
