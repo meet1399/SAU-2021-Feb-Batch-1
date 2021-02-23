@@ -1,0 +1,22 @@
+<div> 
+    <form [formGroup]="ausessionForm">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Session Name</mat-label>
+        <input matInput formControlName="session">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Instructor Name</mat-label>
+        <input matInput formControlName="instructor">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="desc">
+      </mat-form-field>
+
+    </form>
+    <button mat-raised-buton  color="primary" (click)="editValue()">Edit</button>
+</div>
+
