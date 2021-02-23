@@ -1,0 +1,15 @@
+<hr>
+
+<mat-card class="card"  *ngFor="let ausession of ausessionItems; let i = index">
+    
+    <mat-card-title>{{ausession.session}}</mat-card-title>
+    <mat-card-content>{{ausession.instructor}}</mat-card-content>
+    <mat-card-content>{{ausession.desc}}</mat-card-content>
+
+    <button mat-raised-button color="accent" (click)="editAuSession(i)">Edit</button> 
+    <button mat-raised-button color="accent"  (click)="deleteAuSession(i)">Delete</button>     
+
+</mat-card>
+
+<button mat-raised-button color="primary" (click)="addAuSession()">Add New Session</button>
+
